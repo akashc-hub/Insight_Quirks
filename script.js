@@ -124,3 +124,7 @@ var swiper = new Swiper(".slide-content", {
       },
   },
 });
+
+function flipCard(card) {
+  card.classList.toggle('flip');
+}

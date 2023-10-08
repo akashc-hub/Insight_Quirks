@@ -257,3 +257,182 @@ body {
     .bg-light {
       background-color: #eee!important; 
     }
+    .team {
+      background-color: #333;
+      color: #fff;
+      padding: 50px 0;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+}
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+user agent stylesheet
+body {
+    display: block;
+    margin: 8px;
+}
+  
+.team h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #333;
+}
+
+/* Team members container using CSS grid */
+.team-members {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Team member card */
+.team-member {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 70%;
+}
+
+/* Team member image */
+.team-member img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+  object-fit: cover; /* Maintain aspect ratio for images */
+  border: 4px solid #fff;
+  transition: transform 0.3s;
+}
+
+/* Team member name */
+.team-member h3 {
+  font-size: 24px;
+  margin: 0;
+  color: #333;
+}
+
+/* Team member role */
+.team-member p {
+  font-size: 18px;
+  color: #777;
+}
+
+/* Hover effect */
+.team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover effect on image */
+.team-member:hover img {
+  transform: scale(1.1);
+  border-color: #f00; /* Change border color on hover */
+}
+
+/* Advanced Feature: Parallax scrolling */
+.parallax-bg {
+  background-image: url('./about img/parallax-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  z-index: -1;
+  transform: translateZ(0);
+  transition: transform 0.3s;
+}
+
+.team-member:hover .parallax-bg {
+  transform: scale(1.1);
+}
+
+/* Advanced Feature: 3D tilt effect */
+.tilt-effect {
+  perspective: 1000px;
+}
+
+.team-member:hover .tilt-effect {
+  transform: rotateY(15deg) rotateX(-15deg);
+}
+
+/* Advanced Feature: Filter buttons */
+.filter-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.filter-button {
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.filter-button:hover {
+  background-color: #555;
+}
+
+/* Advanced Feature: Search bar */
+.search-bar {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.search-input {
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.interactive-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none; /* Prevent interaction with icon during animation */
+}
+
+.team-member:hover .interactive-icon {
+  opacity: 1;
+  animation: bounce 1s infinite; /* Add bounce animation */
+  pointer-events: auto; /* Enable interaction with icon on hover */
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-20px);
+  }
+  60% {
+      transform: translateY(-10px);
+  }
+}
