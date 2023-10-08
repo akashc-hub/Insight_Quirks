@@ -4,7 +4,7 @@ body {
   height: 100vh;
   color: #fff;
   background-color: #D2E0FB;
-  overflow-x: hidden; /* Add this line to hide horizontal scroll */
+  overflow-x: hidden;
 }
 
 .row {
@@ -168,7 +168,7 @@ svg:not(:root).svg-inline--fa {
   position: static;
   background-color: #ffd700;
   float: center;
-  padding: 39px 35px 6px;
+  padding: 39px 35px 34px;
   font-size: 5vh;
   line-height: 44px;
   text-align: center;
@@ -176,9 +176,10 @@ svg:not(:root).svg-inline--fa {
 }
 
 .features-title3 p {
-  font-size: 3vh;
+  font-size: 5vh;
   margin: 20px 280px 30px 280px;
   color: #4CC166;
+  top: 20px;
 }
 
 .anime {
@@ -187,11 +188,17 @@ svg:not(:root).svg-inline--fa {
   right: 59px;
   top: 92px;
 }
+.anime:hover{
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+}
 
 .features-title3 span {
-  font-size: 15px;
+  font-size: 3vh;
   text-transform: none;
   float: center;
+  font-weight: 600;
+  font-family: monospace;
 }
 #features-qna h2{
   font-size: 4vh;
@@ -805,4 +812,50 @@ body.dark-mode #mode-toggle {
   }
 }
 
+.img-wrapper {
+  position: absolute;
+  left: -10px;
+  top:-20px;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 10;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  visibility: hidden;
+  transform: scale(0.3);
+}
 
+.img-placeholder, .img-placeholder img{
+  height: 100%;
+  width: 100%;
+}
+.img-placeholder img{
+  object-fit: cover;
+  display: block;
+}
+
+.cursor{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    margin-left: -20px;
+    margin-top: -20px;
+    border-radius: 50%;
+    border: 2px solid #16a085;
+    transition: transform .3s ease;
+    transform-origin: center center;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.grow, .grow-small{
+    transform: scale(10);
+    background: #fff;
+    mix-blend-mode:difference;
+    border: none;
+}
+.grow-small{
+    transform: scale(2.5);
+}
