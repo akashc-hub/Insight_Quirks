@@ -423,9 +423,9 @@ h1 {
 .img-grid {
   background-color: #252525;
   width: 101%;
-  height: 280vh;
+  height: 230vh;
   overflow-x: hidden;
-  padding-top: 10vh;
+  padding-top: 9vh;
 
 
 
@@ -535,12 +535,15 @@ h1 {
 }
 
 .article-title {
-  font-size: 18px;
+  font-size: 20px;
+  color: white;
   margin: 0;
 }
 
 .article-description {
   margin: 0;
+  font-size: 17px;
+  color: gainsboro;
 }
 
 .publish-content {
