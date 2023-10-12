@@ -50,6 +50,9 @@ p {
   color: #8f8f8f;
 }
 
+a{
+  color: #fff;
+}
 /*heading*/
 
 .big-heading {
@@ -180,6 +183,8 @@ p {
 
 .features-title2 {
   float: right;
+  font-family: 'Cormorant Garamond', serif;
+
   font-size: 5vh;
   text-align: right;
 }
@@ -202,7 +207,6 @@ p {
   top: 20px;
   font-family: 'Dela Gothic One', cursive;
 }
-
 .anime {
   position: absolute;
   width: 170px;
@@ -210,10 +214,71 @@ p {
   top: 14px;
 }
 
-.anime:hover {
-  filter: invert(100%);
-  -webkit-filter: invert(100%);
+@media (max-width: 425px){
+.anime {
+    width: 40%;
+    top: 130px;
+    left: 91px;
 }
+}
+
+/* Media query for 375px */
+@media (max-width: 375px) {
+  .anime {
+    width: 40%;
+    top: 120px;
+    left: 95px;
+  }
+}
+
+/* Media query for 320px */
+@media (max-width: 320px){
+.anime {
+    width: 43%;
+    top: 130px;
+    left: 80px;
+}}
+
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */.body{
+    width: 100%;
+  }
+}
+
+
+/* .anime:hover {
+  filter: blur(100%);
+  -webkit-filter:blur()(100%);
+} */
+
+/* Responsive styles for screens up to 768px */
+@media (max-width: 768px) {
+  #features {
+    padding: 15px;
+    font-size: 18px;
+  }
+}
+
+/* Responsive styles for screens up to 425px */
+@media (max-width: 425px) {
+  #features {
+    padding: 10px;
+    font-size: 16px;
+  }
+}
+
+/* Responsive styles for screens up to 320px */
+@media (max-width: 320px) {
+  #features {
+    padding: 5px;
+    font-size: 14px;
+  }
+}
+
+
+
+
 
 .features-title3 span {
   font-size: 3vh;
@@ -421,10 +486,10 @@ h1 {
 
 
 .img-grid {
-  background-color: #252525;
+  /* background-color: #252525; */
   width: 101%;
-  height: 230vh;
-  overflow-x: hidden;
+  height: 160vh;
+  overflow: hidden;
   padding-top: 9vh;
 
 
@@ -755,7 +820,7 @@ h1 {
   pointer-events: none;
   z-index: 10;
   border-radius: 50%;
-  mix-blend-mode: difference;
+  mix-blend-mode:unset;
   visibility: hidden;
   transform: scale(0.3);
 }
@@ -919,11 +984,11 @@ h1 {
   text-align: center;
   font-family: 'Lato', sans-serif;
   background: #fff;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   border-radius: 10px;
   /* Rounded corners for the quote box */
   padding: 30px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); */
   margin: 20px 0;
   transition: transform 0.2s ease-in-out;
   /* Add a slight scale effect */
@@ -988,4 +1053,143 @@ cite {
   }
   
   /* Modify other styles for very small screens */
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer a img {
+  width: 40px; /* Set the width of your icons */
+  height: 40px; /* Set the height of your icons */
+  margin: 5px; /* Add spacing between icons if needed */
+  filter: brightness(0) invert(1); /* Add color to the icons */
+}
+
+
+
+
+.footer a {
+  text-decoration: none;
+  color: #fff;
+  margin: 10px;
+  transition: all 0.3s; /* Add a smooth transition effect for the hover */
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  color: #00f; /* Change the color on hover */
+}
+
+.footer img {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  transition: all 0.3s; /* Add a smooth transition effect for the hover */
+}
+
+.footer img:hover {
+  transform: scale(1.2); /* Increase the size of the icon on hover */
+}
+
+.events h1  {
+  text-align: center;
+  color: #000;
+  font-weight: normal;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.container2 {
+  color: #333;
+  margin: 10px auto;
+  text-align: center;
+  
+}
+
+.events {
+  /* padding-bottom: 9px; */
+  /* right: 98px; */
+  /* position: relative; */
+  padding-top: 16px;
+  margin: 0px 150px 0px 150px;
+  background-color: #d7bf07b6;
+  /* left: 60px; */
+  border-radius: 200px 200px 200px 200px;
+}
+
+li {
+  display: inline-block;
+  font-size: 1.5rem; /* Adjust the font size as needed */
+  list-style-type: none;
+  padding: 0.5em; /* Adjust the padding as needed */
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  font-size: 3.375rem; /* Adjust the font size as needed */
+}
+
+#countdown{
+  color: white;
+}
+
+/* Add a blur effect to the body when .events_i is hovered over */
+.events_i {
+  position: absolute;
+  width: 20%;
+  /* writing-mode: lr; */
+  right: 50%;
+  left: 40%;
+  transition: transform 0.3s, box-shadow 0.3s, filter 0.3s; /* Add a transition for smooth hover effect */
+  border: 2px solid transparent; /* Add a transparent border to start with */
+}
+
+.events_i:hover {
+  transform: scale(1.1); /* Scale the element on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add a box shadow on hover */
+  border: 2px solid #000; /* Add a border on hover (you can adjust the color and width) */
+}
+
+/* Add a blur effect to the body */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  z-index: -1;
+  filter: blur(5px); /* Apply a blur effect to the body background */
+  transition: filter 0.3s; /* Add a transition for smooth blur effect */
+}
+
+
+.emoji {
+  padding: 1rem;
+}
+
+.emoji span {
+  font-size: 4rem;
+  padding: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  li {
+    font-size: 1.125rem;
+  }
+  
+  li span {
+    font-size: 2.625rem;
+  }
 }

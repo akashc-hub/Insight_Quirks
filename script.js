@@ -6,7 +6,7 @@ ScrollReveal().reveal(".show-once", {
 
 
 ScrollReveal().reveal(".fade-in", {
-  duration: 3000,
+  duration: 2000,
   origin: "bottom",
   distance: "200px",
   easing: "cubic-bezier(0.5, 0, 0, 1)",
@@ -244,3 +244,35 @@ document.addEventListener("DOMContentLoaded", function() {
 
   autoSlide();
 });
+
+
+(function () {
+  const birthday = new Date("2023-10-14").getTime(); // Replace with your birthday date
+  const x = setInterval(function () {
+    const now = new Date().getTime();
+    const distance = birthday - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+
+    // Check if it's your birthday
+    if (distance < 0) {
+      document.getElementById("headline").innerText = "It's my birthday!";
+      document.getElementById("countdown").style.display = "none";
+      document.getElementById("content").style.display = "block";
+
+      // Add your birthday events here
+      const eventsList = document.getElementById("eventsList");
+      eventsList.innerHTML = "<li>Event 1: Event description</li><li>Event 2: Event description</li>";
+
+      clearInterval(x);
+    }
+  }, 1000);
+})();
