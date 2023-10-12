@@ -65,34 +65,6 @@ mouseOverContainer.onmousemove = function (e) {
 
 
 
-const modeToggle = document.getElementById('mode-toggle');
-const body = document.body;
-
-// Check the user's preference from local storage
-const userPreference = localStorage.getItem('mode');
-
-// Set the initial mode based on user preference or default to light mode
-if (userPreference === 'dark') {
-  body.classList.add('dark-mode');
-} else {
-  body.classList.add('light-mode');
-}
-
-// Function to toggle between dark mode and light mode
-function toggleMode() {
-  if (body.classList.contains('dark-mode')) {
-    body.classList.remove('dark-mode');
-    body.classList.add('light-mode');
-    localStorage.setItem('mode', 'light'); // Store user preference
-  } else {
-    body.classList.remove('light-mode');
-    body.classList.add('dark-mode');
-    localStorage.setItem('mode', 'dark'); // Store user preference
-  }
-}
-
-// Event listener for the mode toggle button
-modeToggle.addEventListener('click', toggleMode);
 
 
 var swiper = new Swiper(".slide-content", {
@@ -229,3 +201,46 @@ function submsg() {
   sumbitbtn.style.display = "block";
   sumbitbtn.style.animation = "slide 0.5s ease-in-out";
 }
+
+
+/*function() {
+	var i = 0;
+	setInterval(function() {
+		$("#quote-" + i).removeClass("main");
+		$("#quote-" + i).addClass("outside");
+		i++;
+		if(i>1) {
+			for(i = 0;) {
+				$("#quote" + i).removeClass("outside");
+			}
+			i = 0;
+		}
+		$("#quote" + i).addClass("main");
+	}, 5000);
+});*/
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const quotes = document.querySelectorAll(".quote");
+  let currentQuote = 0;
+
+  function showQuote(index) {
+    quotes.forEach((quote, i) => {
+      if (i === index) {
+        quote.style.display = "block";
+      } else {
+        quote.style.display = "none";
+      }
+    });
+  }
+
+  function autoSlide() {
+    showQuote(currentQuote);
+    currentQuote = (currentQuote + 1) % quotes.length;
+    setTimeout(autoSlide, 4000); // Change quote every 5 seconds (adjust as needed)
+  }
+
+  autoSlide();
+});

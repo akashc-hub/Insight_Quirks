@@ -28,7 +28,7 @@ body {
 .col-lg-6 h1 {
   color: black;
   /* font-family: 'Pixelify Sans', cursive;  */
-  font-family: 'Cormorant Garamond', serif;  
+  font-family: 'Cormorant Garamond', serif;
 }
 
 .col-lg-6 .roller {
@@ -38,7 +38,7 @@ body {
 h1,
 h2,
 h3 {
-  
+
   /* font-family: 'Pixelify Sans', cursive; */
   font-family: 'Cormorant Garamond', serif;
 
@@ -87,8 +87,8 @@ p {
   color: #000;
 }
 
-.navbar-dark .navbar-nav .nav-link:hover{
-  color:#0056b3;
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #0056b3;
   /* background-color: #D75D5D; */
   border-radius: 20px;
 }
@@ -127,7 +127,7 @@ p {
 }
 
 #features {
- background-color: #ffffff;
+  background-color: #ffffff;
   position: relative;
   text-transform: uppercase;
   /* border-radius: 283px 0px 0px; */
@@ -167,7 +167,7 @@ p {
 
 .features-title {
   font-size: 5vh;
-  font-family: 'Cormorant Garamond', serif;  
+  font-family: 'Cormorant Garamond', serif;
   color: black;
 }
 
@@ -220,7 +220,7 @@ p {
   text-transform: none;
   float: center;
   font-weight: 600;
-  font-family:serif;
+  font-family: serif;
 
 }
 
@@ -428,7 +428,7 @@ h1 {
   padding-top: 10vh;
 
 
- 
+
 }
 
 .wrapper2 {
@@ -544,8 +544,10 @@ h1 {
 }
 
 .publish-content {
+  top: -100px;
+  position: relative;
   text-align: center;
-  margin-top: 20px;
+  margin-top: -29px;
   background-color: #b196ff;
   padding: 30px;
   /* Increase padding for more space inside the container */
@@ -586,80 +588,6 @@ h1 {
   background-color: #0056b3;
 }
 
-/* Dark Mode Styles */
-body.dark-mode {
-  background-color: #333;
-  color: #fff;
-  /* Set the default text color to white */
-}
-
-/* Light Mode Styles (default) */
-body.light-mode {
-  background-color: #fff;
-  color: #000;
-}
-
-/* Restyle specific elements for dark mode */
-
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode p,
-body.dark-mode a {
-  color: #fff;
-  /* Change text color to white for headings, paragraphs, and links */
-}
-
-/* Add more selectors for other elements you want to change to white */
-
-/* Dark Mode Toggle Button Styles - Turned Off */
-#mode-toggle {
-  color: #fff;
-  border: none;
-  padding: -4px 4px;
-  border-radius: 29px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-#mode-toggle:hover {
-  background-color: #555;
-}
-
-#mode-toggle:focus {
-  outline: none;
-}
-
-/* Dark Mode Toggle Button Styles - Turned On */
-body.dark-mode #mode-toggle {
-  background-color: #fff;
-  /* Background color when dark mode is on */
-  color: #333;
-  /* Text color when dark mode is on */
-}
-
-body.dark-mode #mode-toggle:hover {
-  background-color: #eee;
-  /* Background color when dark mode is on and button is hovered */
-}
-
-/* Font color of the button text when dark mode is on */
-body.dark-mode #mode-toggle::before,
-body.dark-mode #mode-toggle {
-  color: #fff;
-  /* Font color in white when dark mode is on */
-}
-
-
-/* Adjust the size and position of the light bulb emoji */
-#mode-toggle::before {
-  content: '💡';
-  /* Light bulb emoji */
-  font-size: 24px;
-  /* Adjust the size as needed */
-  margin-right: 0px;
-  /* Add some spacing between the emoji and text */
-}
 
 .imgagrid {
   padding-top: 67px;
@@ -901,7 +829,7 @@ h2,
 h3 {
   font-family: 'DM Serif Display', serif;
   /* font-family: 'Dela Gothic One', cursive; */
-/* font-family: 'Pixelify Sans', cursive; */
+  /* font-family: 'Pixelify Sans', cursive; */
   color: black;
   font-size: larger;
 }
@@ -918,158 +846,10 @@ h1 {
   color: #F1FAEE;
   font-size: 6rem;
 }
-:root {
-  --lightblk: #252930;
-  --blk: #111417;
-}
-
-.header {
-  font-size: 57px;
-  color: white;
-  font-family: Rubik Mono One;
-  flex-basis: 100%;
-}
-
-.footer {
-  flex-wrap: wrap;
-  box-sizing: border-box;
-  padding: 2em;
-  gap: 10px;
-  display: flex;
-  bottom: 0;
-  position: relative;
-  width: 100%;
-  background-color: var(--blk);
-}
-
-div.right {
-  margin: 0;
-  display: flex;
-  width: 50%;
-  flex-direction: row;
-  gap: 10px;
-  flex: 1;
-}
-
-div.left {
-  flex-basis: 100%;
-  margin: 0;
-  display: flex;
-  gap: 10px;
-  width: 50%;
-  flex-direction: column;
-  flex: 1;
-}
-
-textarea {
-  font-family: Azeret Mono;
-  box-sizing: border-box;
-  color: whitesmoke;
-  outline: none;
-  resize: none;
-  border: none;
-  padding: 1em;
-  border-radius: 10px;
-  background-color: var(--lightblk);
-}
-
-.msg {
-  flex-basis: 100%;
-}
-
-div.bottom {
-  min-width: 0;
-  overflow-x: scroll;
-  padding-top: 1em;
-  gap: 2em;
-  color: grey;
-  width: 100%;
-  justify-content: center;
-  flex-basis: 100%;
-  display: flex;
-}
-
-.ftrtxt {
-  flex-basis: 100%;
-  font-size: 15px;
-  text-align: center;
-  font-family: Rubik Mono One;
-  color: grey;
-}
-
-.ftrhead {
-  font-size: 35px;
-}
-
-.ftrhead::after,
-.ftrtxt::after {
-  content: "\a";
-  white-space: pre;
-}
-
-.ftrlinks {
-  flex-basis: 1;
-}
-
-hr {
-  margin-top: 1em;
-  margin-bottom: 1em;
-  flex-basis: 100%;
-  color: white;
-}
-
-svg {
-  fill: white;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  transition: 0.5s ease-in-out;
-}
-
-svg:hover {
-  transform: scale(1.1);
-  fill: grey;
-}
-
-::placeholder {
-  font-family: Azeret Mono;
-}
 
 
 
-#end {
-  margin-right: auto;
-}
 
-::-webkit-scrollbar {
-  height: 5px;
-  width: 2px;
-}
-
-::-webkit-scrollbar-track {
-  background: none;
-}
-
-::-webkit-scrollbar-thumb {
-  background: white;
-  border-radius: 10px;
-  height: 5px;
-  width: 2px;
-}
-
-#submitbtn {
-  display: none;
-  border-radius: 10px;
-  border: none;
-  font-family: Rubik Mono One;
-  font-size: 15px;
-  transition: 0.5s;
-}
-
-#submitbtn:hover {
-  background-color: var(--lightblk);
-  color: var(--blk);
-}
 
 @keyframes slider {
   0% {
@@ -1077,6 +857,7 @@ svg:hover {
     height: 0%;
     border-radius: 10px;
   }
+
   100% {
     opacity: 1;
     height: 100%;
@@ -1088,22 +869,120 @@ svg:hover {
 
 
 
-    .social-links {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: row; /* Display links horizontally */
-    }
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  /* Display links horizontally */
+}
 
-    .social-link {
-      text-decoration: none;
-      color: #333;
-      margin: 10px;
-      display: flex;
-      align-items: center;
-    }
+.social-link {
+  text-decoration: none;
+  color: #333;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
 
-    .icon {
-      margin-right: 10px;
-      font-size: 24px;
-    }
+.icon {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+
+
+
+
+
+
+/* Quote slider container */
+.quote-slider {
+  text-align: center;
+  margin: 40px auto;
+  max-width: 600px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  /* background: #f9f9f9; */
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Individual quote */
+.quote {
+  display: none;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  /* Rounded corners for the quote box */
+  padding: 30px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  transition: transform 0.2s ease-in-out;
+  /* Add a slight scale effect */
+}
+
+/* Quote text */
+blockquote {
+  font-size: 24px;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Author's name */
+cite {
+  font-family: 'Pacifico', cursive;
+  font-size: 20px;
+  color: #555;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Hover effect for quotes */
+.quote:hover {
+  transform: scale(1.05);
+  /* Slightly scales up on hover for interactivity */
+}
+
+
+
+/* Add media query for smartphones and smaller tablets (max-width: 767px) */
+@media (max-width: 767px) {
+  body {
+    text-align: center;
+  }
+  
+  .title-image {
+    float: none;
+    position: static;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .roller {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  /* Add or modify other styles as needed for smaller screens */
+}
+
+/* Add media query for very small screens (e.g., narrow smartphones, max-width: 400px) */
+@media (max-width: 400px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .roller {
+    font-size: 1.2rem;
+  }
+  
+  /* Modify other styles for very small screens */
+}
