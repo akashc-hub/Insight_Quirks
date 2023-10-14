@@ -465,7 +465,7 @@ h1 {
 .img-grid {
   /* background-color: #252525; */
   width: 101%;
-  height: 160vh;
+  height: 150vh;
   overflow: hidden;
   padding-top: 9vh;
 
@@ -1113,7 +1113,7 @@ li span {
 }
 
 #countdown{
-  color: white;
+  color: black;
 }
 
 /* Add a blur effect to the body when .events_i is hovered over */

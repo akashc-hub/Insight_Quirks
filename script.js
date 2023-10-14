@@ -245,9 +245,8 @@ document.addEventListener("DOMContentLoaded", function() {
   autoSlide();
 });
 
-
 (function () {
-  const birthday = new Date("2023-10-14").getTime(); // Replace with your birthday date
+  const birthday = new Date("2023-10-14").getTime();
   const x = setInterval(function () {
     const now = new Date().getTime();
     const distance = birthday - now;
@@ -264,12 +263,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Check if it's your birthday
     if (distance < 0) {
-      document.getElementById("countdown").style.display = "none";
-      document.getElementById("content").style.display = "block";
+      document.getElementById("countdown").style.display = "block";
 
       // Add your birthday events here
-      const eventsList = document.getElementById("eventsList");
-      eventsList.innerHTML = "<li>Event 1: Event description</li><li>Event 2: Event description</li>";
+      // const eventsList = document.getElementById("eventsList");
+      // eventsList.innerHTML = "<li>Event 1: Event description</li><li>Event 2: Event description</li>";
 
       clearInterval(x);
     }
