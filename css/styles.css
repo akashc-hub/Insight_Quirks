@@ -1,14 +1,17 @@
 body {
-  /* font-family: 'Dela Gothic One', cursive; */
   font-family: 'Cormorant Garamond', serif;
-  /* font-family: 'DM Serif Display', serif;
-  font-family: 'Pixelify Sans', cursive; */
   text-align: center;
   height: 100vh;
   color: #fff;
   background-color: #fff;
   overflow-x: hidden;
 }
+
+@media only screen and (max-width: 480px) {
+  body {
+  font-size: 20px;
+  }
+  }
 
 .row {
   --bs-gutter-x: 0.5rem;
@@ -38,10 +41,7 @@ body {
 h1,
 h2,
 h3 {
-
-  /* font-family: 'Pixelify Sans', cursive; */
   font-family: 'Cormorant Garamond', serif;
-
   color: black;
   font-size: larger;
 }
@@ -113,12 +113,54 @@ a{
   text-align: left;
   border-radius: 0px 0px 143px 0px;
   height: 690px;
-  /* border-radius: 0px 286px; */
+  /* border-radius: 0px 286px; *//* Default styles that apply to all screen sizes */
+#title {
+  background-color: #D2F980;
+  color: #fff;
+  text-align: left;
+  border-radius: 0px 0px 143px 0px;
+  height: 690px;
 }
 
 #title .container-fluid {
   padding: 3% 15% 7%;
 }
+
+.title-image {
+  width: 112%;
+  bottom: -115px;
+  transform: rotate(20deg);
+  /* filter: drop-shadow(10px 10px 10px black); */
+  position: absolute;
+  left: 69%;
+}
+
+/* Responsive styles for smartphones */
+@media screen and (max-width: 767px) {
+  #title {
+    height: auto; /* Adjust the height to be dynamic based on content */
+    border-radius: 0; /* Remove border-radius for smaller screens */
+  }
+
+  #title .container-fluid {
+    padding: 3% 5%; /* Adjust the padding for smaller screens */
+  }
+
+  .title-image {
+    width: 100%; /* Make the image width 100% for smaller screens */
+    transform: none; /* Remove the rotation for smaller screens */
+    left: 0; /* Adjust the position of the image for smaller screens */
+    bottom: 0; /* Adjust the position of the image for smaller screens */
+  }
+}
+
+}
+
+#title .container-fluid {
+  padding: 3% 15% 7%;
+}
+
+
 
 .title-image {
   width: 112%;
@@ -213,72 +255,7 @@ a{
   right: 59px;
   top: 14px;
 }
-
-@media (max-width: 425px){
-.anime {
-    width: 40%;
-    top: 130px;
-    left: 91px;
-}
-}
-
-/* Media query for 375px */
-@media (max-width: 375px) {
-  .anime {
-    width: 40%;
-    top: 120px;
-    left: 95px;
-  }
-}
-
-/* Media query for 320px */
-@media (max-width: 320px){
-.anime {
-    width: 43%;
-    top: 130px;
-    left: 80px;
-}}
-
-
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */.body{
-    width: 100%;
-  }
-}
-
-
-/* .anime:hover {
-  filter: blur(100%);
-  -webkit-filter:blur()(100%);
-} */
-
-/* Responsive styles for screens up to 768px */
-@media (max-width: 768px) {
-  #features {
-    padding: 15px;
-    font-size: 18px;
-  }
-}
-
-/* Responsive styles for screens up to 425px */
-@media (max-width: 425px) {
-  #features {
-    padding: 10px;
-    font-size: 16px;
-  }
-}
-
-/* Responsive styles for screens up to 320px */
-@media (max-width: 320px) {
-  #features {
-    padding: 5px;
-    font-size: 14px;
-  }
-}
-
-
-
-
+ 
 
 .features-title3 span {
   font-size: 3vh;
@@ -1193,3 +1170,5 @@ body::before {
     font-size: 2.625rem;
   }
 }
+
+

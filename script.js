@@ -264,7 +264,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Check if it's your birthday
     if (distance < 0) {
-      document.getElementById("headline").innerText = "It's my birthday!";
       document.getElementById("countdown").style.display = "none";
       document.getElementById("content").style.display = "block";
 
