@@ -12,3 +12,4 @@ git push -f -u origin main
 Hi, This is AKash
 
 abhishek# Insight_Quirks
+# Insight_Quirks
